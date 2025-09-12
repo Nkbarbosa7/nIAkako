@@ -74,7 +74,23 @@ afirmacao:"No início, eu ficaria com medo do que essa tecnologia pode fazer."
 ];
 
 
+let atual = 0;
+let perguntaAtual;
+let historiaFinal="";
 
+function mostraPergunta(){
+    if(atual >=perguntas.length){
+        mostraResultado();
+        return;
+    }
+    perguntaAtual=perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent="";
+    mostraAlternativas();
+}
 
+function mostraAlternativas(){
+    for(const alternativa of perguntaAtual.alternativas)
+}
 
 
